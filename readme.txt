@@ -1,40 +1,34 @@
-# Testes Cypress - Kanban Frontend
+# Testes Automatizados com Cypress - Kanban Frontend
 
-Este repositório contém **testes end-to-end** automatizados para o site Kanban:
+Este repositório contém **testes end-to-end** desenvolvidos com [Cypress](https://www.cypress.io/) para validar funcionalidades de um sistema Kanban.
 
-- **SCRUM-1**: Exclusão de coluna sem confirmação e sem recuperação.  
+## 🎯 Objetivos
+- Exercitar práticas de QA automatizado.
+- Identificar comportamentos inesperados no sistema.
+- Demonstrar conhecimento em escrita e execução de testes.
+
+## 🧪 Cenários de Teste
+- **SCRUM-1**: Exclusão de coluna sem confirmação e sem opção de recuperação.
 - **SCRUM-3**: Verificação da ausência de botão de edição de tags.
 
+## 📂 Estrutura
+
+cypress/ ├─ e2e/ │  ├─ excluir_coluna.cy.js   # Teste de exclusão de coluna │  └─ opcao_editarTags.cy.js # Teste de edição de tags
+
+
+## ✅ Resultados
+- **SCRUM-1**: Coluna "Done" removida sem confirmação ou opção de desfazer.  
+- **SCRUM-3**: Botão de editar tags não existe, conforme esperado.  
+
 ---
 
-## URL do site testado
-
-[https://kanban-dusky-five.vercel.app/](https://kanban-dusky-five.vercel.app/)
+## 🔮 Futuras melhorias
+- Adicionar testes de **login e autenticação**.  
+- Validar **criação e edição de tarefas**.  
+- Testar **movimentação de tarefas entre colunas**.  
+- Implementar testes de **responsividade** (mobile vs desktop).  
+- Configurar **pipeline de CI/CD** para execução automática dos testes.  
 
 ---
 
-## Estrutura de arquivos
-
-cypress/
-├─ e2e/
-│ ├─ excluir_coluna.cy.js # Teste de exclusão de coluna
-│ └─ opcao_editarTags.cy.js # Teste de edição de tags (simplificado)
-
-Descrição dos testes
-SCRUM-1 - Exclusão de coluna
-
-Objetivo: Verificar se a coluna “Done” pode ser excluída sem aparecer uma janela de confirmação.
-
-Resultado esperado: Coluna “Done” desaparece e não aparece confirmação nem botão “desfazer/undo”.
-
-Resultado obtido: Teste passou, coluna foi removida corretamente.
-
-SCRUM-3 - Edição de tags
-
-Objetivo: Verificar se existe botão de edição de tags nas tarefas.
-
-Resultado esperado: Não deve existir botão de editar tags.
-
-Resultado obtido: Teste passou, botão de editar não existe.
-
-Observação: Adição de tags foi simplificada para que o teste funcione mesmo que o layout do site varie.
+> ⚠️ Este repositório tem caráter **didático e demonstrativo**, mostrando minha experiência prática com testes automatizados.
